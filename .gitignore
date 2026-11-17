@@ -1,1 +1,16 @@
+# 1. Các file cấu hình nhạy cảm (CỤC BỘ)
 luu-y.txt
+firmware/secrets.h
+
+# 2. Các file rác của hệ điều hành
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 3. Các file biên dịch tạm (Nếu dùng VSCode/PlatformIO/Arduino IDE)
+.vscode/
+.pio/
+build/
+*.bin
+*.elf
+*.hex
