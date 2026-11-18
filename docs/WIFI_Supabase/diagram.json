@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -233.4, "left": -208.4, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -240, "left": -350.36, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -168.85,
+      "left": -163.2,
+      "attrs": { "value": "4700" }
+    },
+    {
+      "type": "wokwi-ds18b20",
+      "id": "temp1",
+      "top": -145.87,
+      "left": -122.48,
+      "rotate": 180,
+      "attrs": { "temperature": "94.4" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:3V3", "bb1:tp.1", "red", [ "v-57.6", "h115.35", "v47.7" ] ],
+    [ "esp:GND.1", "bb1:tn.1", "black", [ "h-19.05", "v-163.2", "h124.8", "v38.5" ] ],
+    [ "bb1:tp.2", "bb1:3t.a", "red", [ "v0" ] ],
+    [ "r1:1", "bb1:3t.c", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:9t.c", "", [ "$bb" ] ],
+    [ "bb1:tp.6", "bb1:8t.a", "red", [ "v0" ] ],
+    [ "bb1:tn.8", "bb1:10t.a", "black", [ "v28.7", "h1.6" ] ],
+    [ "bb1:9t.d", "esp:5", "green", [ "h-28.8", "v28.8" ] ],
+    [ "temp1:GND", "bb1:10t.e", "", [ "$bb" ] ],
+    [ "temp1:DQ", "bb1:9t.e", "", [ "$bb" ] ],
+    [ "temp1:VCC", "bb1:8t.e", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}

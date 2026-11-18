@@ -1,6 +1,6 @@
 # 1. Các file cấu hình nhạy cảm (CỤC BỘ)
 luu-y.txt
-firmware/secrets.h
+secrets.h
 
 # 2. Các file rác của hệ điều hành
 .DS_Store
